@@ -36,7 +36,6 @@ body {
     width: 150px;
     position: relative;
     transform-style: preserve-3d;
-    transform: rotateZ(180deg) rotateY(270deg);
     transition: all 2s ease;
 }
 
