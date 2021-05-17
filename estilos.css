@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    perspective: 820px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #DFDFDF;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.tirar {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 7px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background: #0f526d;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all .5s ease;
+}
+
+.tirar:hover, .tirar:focus {
+    opacity: 0.8;
+}
+
+.cubo {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateZ(180deg) rotateY(270deg);
+    transition: all 2s ease;
+}
+
+.lado {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4em;
+    font-weight: bold;
+    border: 2px solid #000;
+    background: #fff;
+}
+
+.lado:nth-child(1) {
+    transform: translateZ(75px);
+}
+
+.lado:nth-child(2) {
+    transform: rotateX(90deg) translateZ(75px);
+}
+
+.lado:nth-child(2) div:nth-child(1) {
+    margin-top: 80px;
+    margin-left: 80px;
+}
+
+.lado:nth-child(2) div:nth-child(2) {
+    margin-bottom: 80px;
+    margin-right: 80px;
+}
+
+.lado:nth-child(3) {
+    transform: rotateY(90deg) translateZ(75px);
+}
+
+.lado:nth-child(4) {
+    transform: translateZ(-75px);
+}
+
+.lado:nth-child(4) div:nth-child(1) {
+    margin-top: 50px;
+}
+
+.lado:nth-child(4) div:nth-child(2) {
+    margin-bottom: 60px;
+}
+
+.lado:nth-child(5) {
+    transform: rotateX(90deg) translateZ(-75px);
+}
+
+.lado:nth-child(5) div:nth-child(1) {
+    margin-top: 90px;
+    margin-left: 90px;
+}
+
+.lado:nth-child(5) div:nth-child(2) {
+    margin-top: 90px;
+    margin-right: 90px;
+}
+
+.lado:nth-child(5) div:nth-child(3) {
+    margin-bottom: 90px;
+    margin-right: 90px;
+}
+
+.lado:nth-child(5) div:nth-child(4) {
+    margin-bottom: 90px;
+    margin-left: 90px;
+}
+
+.lado:nth-child(6) {
+    transform: rotateY(90deg) translateZ(-75px);
+}
+
+.lado:nth-child(6) div:nth-child(1) {
+    margin-top: 90px;
+    margin-right: 90px;
+}
+
+.lado:nth-child(6) div:nth-child(2) {
+    margin-top: 90px;
+    margin-left: 90px;
+}
+
+.lado:nth-child(6) div:nth-child(3) {
+    margin-bottom: 90px;
+    margin-left: 90px;
+}
+
+.lado:nth-child(6) div:nth-child(4) {
+    margin-bottom: 90px;
+    margin-right: 90px;
+}
+
+.lado div {
+    position: absolute;
+}
